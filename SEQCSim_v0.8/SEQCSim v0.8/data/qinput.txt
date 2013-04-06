@@ -1,0 +1,15 @@
+qinput.txt format version 1
+
+comment: The variables assigned below are assumed to be 30-bit register (see qconfig.txt).
+
+comment: Let the first added (a) be 1 ().
+
+a = 1
+
+comment: Let the first added (b) be 1 ().
+
+b = 1
+
+comment: At the end of the program,
+comment: the sum a + b, wich is 2
+comment: should be in a.

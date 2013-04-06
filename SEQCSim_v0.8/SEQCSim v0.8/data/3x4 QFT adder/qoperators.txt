@@ -1,0 +1,123 @@
+qoperators.txt format version 1
+operators: 10
+
+comment: ----------------------------------------------------
+
+operator #: 0
+name: X
+size: 1 bits
+comment: In-place unary NOT, or Pauli x-axis spin operator.
+matrix:
+(0 + i*0) (1 + i*0) 
+(1 + i*0) (0 + i*0) 
+
+comment: ----------------------------------------------------
+
+operator #: 1
+name: cNOT
+size: 2 bits
+comment: Controlled-NOT; XOR the 1st bit into the 2nd.
+matrix:
+(1 + i*0) (0 + i*0) (0 + i*0) (0 + i*0) 
+(0 + i*0) (1 + i*0) (0 + i*0) (0 + i*0) 
+(0 + i*0) (0 + i*0) (0 + i*0) (1 + i*0) 
+(0 + i*0) (0 + i*0) (1 + i*0) (0 + i*0) 
+
+comment: ----------------------------------------------------
+
+operator #: 2
+name: H
+size: 1 bits
+comment: Wash-Hadamard transformation; H = (X+Z)/sqrt(2).
+matrix:
+(0.70710678118654752440084436210485 + i*0)(0.70710678118654752440084436210485 + i*0)
+(0.70710678118654752440084436210485 + i*0)(-0.70710678118654752440084436210485 + i*0)
+comment: The above makes we wish we had a real language in which we could just say sqrt(2)/2.
+
+comment: ----------------------------------------------------
+
+operator #: 3
+name: cZ
+size: 2 bits
+comment: Controlled-phase gate for angle pi; cZ = ~n*I + n*Z,
+comment: where n is the 1-Qbit number operator n = (1+Z)/2 = [(0 0) (0 1)],
+comment: ~n = 1-n is the complementary operator ~n = [(1 0) (0 1)], and
+comment: where "*" is tensor product, and I is the 1-Qbit identity matrix.
+matrix:
+(1 + i*0) (0 + i*0) (0 + i*0) (0 + i*0) 
+(0 + i*0) (1 + i*0) (0 + i*0) (0 + i*0) 
+(0 + i*0) (0 + i*0) (1 + i*0) (0 + i*0) 
+(0 + i*0) (0 + i*0) (0 + i*0) (-1 + i*0)
+
+comment: ----------------------------------------------------
+
+operator #: 4
+name: cPiOver2
+size: 2 bits
+comment: Controlled-phase gate for angle pi/2; cPiOver2 = ~n*I + n*exp{i*n*pi/2}
+matrix:
+(1 + i*0) (0 + i*0) (0 + i*0) (0 + i*0) 
+(0 + i*0) (1 + i*0) (0 + i*0) (0 + i*0) 
+(0 + i*0) (0 + i*0) (1 + i*0) (0 + i*0) 
+(0 + i*0) (0 + i*0) (0 + i*0) (0 + i*1)
+
+comment: ----------------------------------------------------
+
+operator #: 5
+name: cPiOver4
+size: 2 bits
+comment: Controlled-phase gate for angle pi/4; cPiOver4 = ~n*I + exp{i*n*pi/4}
+matrix:
+(1 + i*0) (0 + i*0) (0 + i*0) (0 + i*0) 
+(0 + i*0) (1 + i*0) (0 + i*0) (0 + i*0) 
+(0 + i*0) (0 + i*0) (1 + i*0) (0 + i*0) 
+(0 + i*0) (0 + i*0) (0 + i*0) (0.70710678118654752440084436210485 + i*0.70710678118654752440084436210485)
+
+comment: ----------------------------------------------------
+
+operator #: 6
+name: cPiOver8
+size: 2 bits
+comment: Controlled-phase gate for angle pi/8; cPiOver8 = ~n*I + exp{i*n*pi/8}
+matrix:
+(1 + i*0) (0 + i*0) (0 + i*0) (0 + i*0) 
+(0 + i*0) (1 + i*0) (0 + i*0) (0 + i*0) 
+(0 + i*0) (0 + i*0) (1 + i*0) (0 + i*0) 
+(0 + i*0) (0 + i*0) (0 + i*0) (0.92387953251128675612818318939679 + i*0.3826834323650897717284599840304)
+
+comment: ----------------------------------------------------
+
+operator #: 7
+name: inv_cPiOver2
+size: 2 bits
+comment: Inverted controlled-phase gate for angle pi/2; inv_cPiOver2 = ~n*I + n*exp{-i*n*pi/2}
+matrix:
+(1 + i*0) (0 + i*0) (0 + i*0) (0 + i*0) 
+(0 + i*0) (1 + i*0) (0 + i*0) (0 + i*0) 
+(0 + i*0) (0 + i*0) (1 + i*0) (0 + i*0) 
+(0 + i*0) (0 + i*0) (0 + i*0) (0 + i*-1)
+
+comment: ----------------------------------------------------
+
+operator #: 8
+name: inv_cPiOver4
+size: 2 bits
+comment: Inverted controlled-phase gate for angle pi/4; cPiOver4 = ~n*I + exp{-i*n*pi/4}
+matrix:
+(1 + i*0) (0 + i*0) (0 + i*0) (0 + i*0) 
+(0 + i*0) (1 + i*0) (0 + i*0) (0 + i*0) 
+(0 + i*0) (0 + i*0) (1 + i*0) (0 + i*0) 
+(0 + i*0) (0 + i*0) (0 + i*0) (0.70710678118654752440084436210485 + i*-0.70710678118654752440084436210485)
+
+comment: ----------------------------------------------------
+
+operator #: 9
+name: inv_cPiOver8
+size: 2 bits
+comment: Inverted controlled-phase gate for angle pi/8; cPiOver8 = ~n*I + exp{-i*n*pi/8}
+matrix:
+(1 + i*0) (0 + i*0) (0 + i*0) (0 + i*0) 
+(0 + i*0) (1 + i*0) (0 + i*0) (0 + i*0) 
+(0 + i*0) (0 + i*0) (1 + i*0) (0 + i*0) 
+(0 + i*0) (0 + i*0) (0 + i*0) (0.92387953251128675612818318939679 + i*-0.3826834323650897717284599840304)
+

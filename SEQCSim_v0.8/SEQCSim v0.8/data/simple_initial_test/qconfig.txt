@@ -1,0 +1,14 @@
+qconfig.txt format version 1
+bits: 10
+named bit: a @ 0
+named bit: b @ 1
+named bit: c @ 2
+named bit: d @ 3
+named bit: e @ 4
+named bit: f @ 5
+named bit: g @ 6
+named bit: h @ 7
+named bit: i @ 8
+named bit: j @ 9
+named bitarray: arr[5] @ 5
+comment: arr[0]-arr[4] are aliases for bits f-j

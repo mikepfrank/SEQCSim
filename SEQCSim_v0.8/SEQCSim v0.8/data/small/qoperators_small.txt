@@ -1,0 +1,44 @@
+qoperators.txt format version 1
+operators: 4
+comment: ----------------------------------------------------
+operator #: 0
+name: H
+size: 1 bits
+comment: Wash-Hadamard transformation; H = (X+Z)/sqrt(2).
+matrix:
+(0.70710678118654752440084436210485 + i*0)(0.70710678118654752440084436210485 + i*0)
+(0.70710678118654752440084436210485 + i*0)(-0.70710678118654752440084436210485 + i*0)
+comment: The above makes we wish we had a real language in which we could just say sqrt(2)/2.
+comment: ----------------------------------------------------
+operator #: 1
+name: cZ
+size: 2 bits
+comment: Controlled-phase gate for angle pi; cZ = ~n*I + n*Z,
+comment: where n is the 1-Qbit number operator n = (1+Z)/2 = [(0 0) (0 1)],
+comment: ~n = 1-n is the complementary operator ~n = [(1 0) (0 1)], and
+comment: where "*" is tensor product, and I is the 1-Qbit identity matrix.
+matrix:
+(1 + i*0) (0 + i*0) (0 + i*0) (0 + i*0) 
+(0 + i*0) (1 + i*0) (0 + i*0) (0 + i*0) 
+(0 + i*0) (0 + i*0) (1 + i*0) (0 + i*0) 
+(0 + i*0) (0 + i*0) (0 + i*0) (-1 + i*0)
+comment: ----------------------------------------------------
+operator #: 2
+name: cPiOver2
+size: 2 bits
+comment: Controlled-phase gate for angle pi/2; cPiOver2 = ~n*I + n*exp{i*n*pi/2}
+matrix:
+(1 + i*0) (0 + i*0) (0 + i*0) (0 + i*0) 
+(0 + i*0) (1 + i*0) (0 + i*0) (0 + i*0) 
+(0 + i*0) (0 + i*0) (1 + i*0) (0 + i*0) 
+(0 + i*0) (0 + i*0) (0 + i*0) (0 + i*1)
+comment: ----------------------------------------------------
+operator #: 3
+name: inv_cPiOver2
+size: 2 bits
+comment: Inverted controlled-phase gate for angle pi/2; inv_cPiOver2 = ~n*I + n*exp{-i*n*pi/2}
+matrix:
+(1 + i*0) (0 + i*0) (0 + i*0) (0 + i*0) 
+(0 + i*0) (1 + i*0) (0 + i*0) (0 + i*0) 
+(0 + i*0) (0 + i*0) (1 + i*0) (0 + i*0) 
+(0 + i*0) (0 + i*0) (0 + i*0) (0 + i*-1)

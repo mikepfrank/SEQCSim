@@ -1,0 +1,11 @@
+qconfig.txt format version 1
+bits: 9
+
+named bitarray: a[6] @ 0
+comment: 			a[0] is at qubit 0, a[1] at qubit 1, ..., a[5] at qubit 5.
+
+named bitarray: b[3] @ 6
+comment: 			b[0] is at qubit 6, ..., b[2] at qubit 8.
+
+comment: Bit order in printed states is:
+comment:    bit#8 -> b[2] b[1] b[0] a[5] a[4] a[3] a[2] a[1] a[0] <- bit#0

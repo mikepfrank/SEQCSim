@@ -1,0 +1,29 @@
+
+Welcome to SEQCSIM, the Space-Efficient Quantum Computer SIMulator.
+	(C++ console version)
+By Michael P. Frank, Uwe Meyer-Baese, Irinel Chiorescu, and Liviu Oniciuc.
+Copyright (C) 2008 Florida State University Board of Trustees.
+ 	All rights reserved.
+
+
+SEQCSim::run(): Initial state is 3->0101<-0 (4 bits) ==> (1 + i*0).
+SEQCSim::Bohm_step_forwards(): (tPC=0)
+   The new current state is 3->0111<-0 (4 bits) ==> (0.707107 + i*0).
+SEQCSim::Bohm_step_forwards(): (tPC=1)
+   The new current state is 3->0111<-0 (4 bits) ==> (0 + i*0.707107).
+SEQCSim::Bohm_step_forwards(): (tPC=2)
+   The new current state is 3->0110<-0 (4 bits) ==> (0 + i*0.5).
+SEQCSim::Bohm_step_forwards(): (tPC=3)
+   The new current state is 3->0110<-0 (4 bits) ==> (0 + i*0.5).
+SEQCSim::Bohm_step_forwards(): (tPC=4)
+   The new current state is 3->0110<-0 (4 bits) ==> (0 + i*0.5).
+SEQCSim::Bohm_step_forwards(): (tPC=5)
+   The new current state is 3->0110<-0 (4 bits) ==> (-0.5 + i*0).
+SEQCSim::Bohm_step_forwards(): (tPC=6)
+   The new current state is 3->0110<-0 (4 bits) ==> (-0.707107 + i*0).
+SEQCSim::Bohm_step_forwards(): (tPC=7)
+   The new current state is 3->0110<-0 (4 bits) ==> (-0.707107 + i*0).
+SEQCSim::Bohm_step_forwards(): (tPC=8)
+   The new current state is 3->0110<-0 (4 bits) ==> (1 + i*0).
+SEQCSim::done(): The PC value 9 is >= the number of operations 9.
+	We are done!

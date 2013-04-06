@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual C++ Express 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SEQCSim", "SEQCSim\SEQCSim.vcproj", "{1A2DD81C-F522-4899-B8D7-C51C02A1C9D7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1A2DD81C-F522-4899-B8D7-C51C02A1C9D7}.Debug|Win32.ActiveCfg = Debug|Win32
+		{1A2DD81C-F522-4899-B8D7-C51C02A1C9D7}.Debug|Win32.Build.0 = Debug|Win32
+		{1A2DD81C-F522-4899-B8D7-C51C02A1C9D7}.Release|Win32.ActiveCfg = Release|Win32
+		{1A2DD81C-F522-4899-B8D7-C51C02A1C9D7}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

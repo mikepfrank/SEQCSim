@@ -1,0 +1,14 @@
+qinput.txt format version 1
+
+comment: The variables assigned below are assumed to be 4-bit registers (see qconfig.txt).
+
+comment: 	Let the first addend (a) be 0 (000000).
+
+a = 0
+
+comment: 	Let the second addend (b) be 1 (001).
+
+b = 1
+
+comment: At the end of the program,
+comment: a should be an equal superposition of |0> and |1>.

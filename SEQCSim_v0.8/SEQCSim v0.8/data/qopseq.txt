@@ -1,0 +1,35 @@
+qopseq.txt format version 1
+operations: 9
+
+comment: 	This algorithm assumes there are two 2-bit registers a, b.
+comment: 	It computes a += b (interpreting the registers as binary 
+comment: 	integers) using a highly nonclassical approach based on
+comment:	quantum Fourier transforms.  
+
+comment: 	The concept is from "Addition on a Quantum Computer," by
+comment:	Thomas G. Draper, 6/15/2000, arXiv:quant-ph/0008033v1.
+
+comment: -------- Quantum Fourier Transform on addend/sum register a[] ------------
+
+operation #0: apply unary operator H to bits a[1]
+operation #1: apply binary operator cPiOver2 to bits a[1], a[0]
+
+operation #2: apply unary operator H to bits a[0]
+
+comment: -------- Add phase corresponding to addend b[] --------------
+
+operation #3: apply binary operator cZ to bits b[1], a[1]
+operation #4: apply binary operator cZ to bits b[0], a[0]
+
+operation #5: apply binary operator cPiOver2 to bits b[0], a[1]
+
+comment: -------- Inverse Quantum Fourier Transform on addend/sum register a[] ------------
+
+operation #6: apply unary operator H to bits a[0]
+
+operation #7: apply binary operator inv_cPiOver2 to bits a[1], a[0]
+operation #8: apply unary operator H to bits a[1]
+
+
+
+

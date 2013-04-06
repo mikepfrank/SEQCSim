@@ -1,0 +1,56 @@
+qopseq.txt format version 1
+operations: 28
+
+comment: This is Shor's algorithm for factoring the number n=6.
+
+comment: We use the "random" base value x=5.
+comment: 1. Let a=0; b=0.
+comment: 2. Perform H on each bit of a.
+comment: 3. Perform b=(x^a mod n).  In this case, this reduces
+comment:      to b=1 (done in initial state), CNOT(a[0],b[2]).
+comment: 4. Perform QFT(a).  (Quantum Fourier Transform)
+comment: 5. Measure a.
+
+comment: -------- Quantum Fourier Transform on addend register c ------------
+
+comment: Perform H on each bit of a.
+
+operation #0: apply unary operator H to bits a[0]
+operation #1: apply unary operator H to bits a[1]
+operation #2: apply unary operator H to bits a[2]
+operation #3: apply unary operator H to bits a[3]
+operation #4: apply unary operator H to bits a[4]
+operation #5: apply unary operator H to bits a[5]
+
+comment: Perform b=(x^a mod n).
+
+operation #6: apply binary operator cNOT to bits a[0], b[2]
+
+comment: Perform QFT(a).
+
+operation #7:  apply unary  operator H 		to bits a[5]
+operation #8:  apply binary operator cPiOver2 	to bits a[5], a[4]
+operation #9:  apply binary operator cPiOver4 	to bits a[5], a[3]
+operation #10: apply binary operator cPiOver8 	to bits a[5], a[2]
+operation #11: apply binary operator cPiOver16 	to bits a[5], a[1]
+operation #12: apply binary operator cPiOver32 	to bits a[5], a[0]
+
+operation #13: apply unary  operator H 		to bits a[4]
+operation #14: apply binary operator cPiOver2 	to bits a[4], a[3]
+operation #15: apply binary operator cPiOver4 	to bits a[4], a[2]
+operation #16: apply binary operator cPiOver8 	to bits a[4], a[1]
+operation #17: apply binary operator cPiOver16 	to bits a[4], a[0]
+
+operation #18: apply unary  operator H 		to bits a[3]
+operation #19: apply binary operator cPiOver2 	to bits a[3], a[2]
+operation #20: apply binary operator cPiOver4 	to bits a[3], a[1]
+operation #21: apply binary operator cPiOver8 	to bits a[3], a[0]
+
+operation #22: apply unary  operator H 		to bits a[2]
+operation #23: apply binary operator cPiOver2 	to bits a[2], a[1]
+operation #24: apply binary operator cPiOver4 	to bits a[2], a[0]
+
+operation #25: apply unary  operator H 		to bits a[1]
+operation #26: apply binary operator cPiOver2 	to bits a[1], a[0]
+
+operation #27: apply unary  operator H 		to bits a[0]

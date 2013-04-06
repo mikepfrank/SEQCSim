@@ -1,0 +1,11 @@
+qconfig.txt format version 1
+bits: 6
+
+comment: ---------------------- a[] is for the first 3-bit integer addend, and the 3-bit sum
+named bitarray: a[3] @ 0
+comment: 			a[0] is at qubit 0, a[1] at qubit 1, ..., a[2] at qubit 2.
+
+comment: ---------------------- b[] is for the second 3-bit integer addend
+named bitarray: b[3] @ 3
+comment: 			b[0] is at qubit 3, ..., b[3] at qubit 5.
+

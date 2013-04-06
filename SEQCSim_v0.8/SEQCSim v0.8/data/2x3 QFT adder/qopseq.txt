@@ -1,0 +1,46 @@
+qopseq.txt format version 1
+operations: 18
+
+comment: 	This algorithm assumes there are two 3-bit registers a, b.
+comment: 	It computes a += b (interpreting the registers as binary 
+comment: 	integers) using a highly nonclassical approach based on
+comment:	quantum Fourier transforms.  
+
+comment: 	The concept is from "Addition on a Quantum Computer," by
+comment:	Thomas G. Draper, 6/15/2000, arXiv:quant-ph/0008033v1.
+
+comment: -------- Quantum Fourier Transform on addend register a[] ------------
+
+operation #0: apply unary operator H to bits a[2]
+operation #1: apply binary operator cPiOver2 to bits a[2], a[1]
+operation #2: apply binary operator cPiOver4 to bits a[2], a[0]
+
+operation #3: apply unary operator H to bits a[1]
+operation #4: apply binary operator cPiOver2 to bits a[1], a[0]
+
+operation #5: apply unary operator H to bits a[0]
+
+comment: -------- Add phase corresponding to addend b[] --------------
+
+operation #6: apply binary operator cZ to bits b[2], a[2]
+operation #7: apply binary operator cZ to bits b[1], a[1]
+operation #8: apply binary operator cZ to bits b[0], a[0]
+
+operation #9: apply binary operator cPiOver2 to bits b[1], a[2]
+operation #10: apply binary operator cPiOver2 to bits b[0], a[1]
+
+operation #11: apply binary operator cPiOver4 to bits b[0], a[2]
+
+comment: -------- Inverse Quantum Fourier Transform on addend register a[] ------------
+
+operation #12: apply unary operator H to bits a[0]
+
+operation #13: apply binary operator inv_cPiOver2 to bits a[1], a[0]
+operation #14: apply unary operator H to bits a[1]
+
+operation #15: apply binary operator inv_cPiOver4 to bits a[2], a[0]
+operation #16: apply binary operator inv_cPiOver2 to bits a[2], a[1]
+operation #17: apply unary operator H to bits a[2]
+
+
+

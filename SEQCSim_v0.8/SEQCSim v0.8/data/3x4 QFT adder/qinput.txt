@@ -1,0 +1,19 @@
+qinput.txt format version 1
+
+comment: The variables assigned below are assumed to be 4-bit registers (see qconfig.txt).
+
+comment: 	Let the first addend (a) be 2 (0010).
+
+a = 2
+
+comment: 	Let the second addend (b) be 4 (0100).
+
+b = 4
+
+comment: 	Let the third addend (c) be 7 (0111).
+
+c = 7
+
+comment: 	At the end of the program,
+comment: 	the sum a+b+c, which is 13 (1101), 
+comment: 	should be the result of c += a+b.

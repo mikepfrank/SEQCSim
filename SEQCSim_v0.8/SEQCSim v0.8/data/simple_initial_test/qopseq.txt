@@ -1,0 +1,7 @@
+qopseq.txt format version 1
+operations: 4
+operation #0: apply binary operator cNOT to bits a, b
+operation #1: apply binary operator cNOT to bits b, c
+operation #2: apply binary operator cNOT to bits c, a
+operation #3: apply unary operator X to bit b
+

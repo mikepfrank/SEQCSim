@@ -1,0 +1,14 @@
+qinput.txt format version 1
+comment: The variables assigned below are assumed to 
+comment: be 2-bit registers (see qconfig.txt).
+comment: 	Let the first addend (a) be 1 (bit 1)->01<-(bit 0).
+
+a = 1
+
+comment: 	Let the second addend (b) be 1 (1)->01<-(0).
+
+b = 1
+
+comment: 	At the end of the program,
+comment: 	the sum a+b, which is 2 (1->10<-0), 
+comment: 	should be in a, the result of a += b.
